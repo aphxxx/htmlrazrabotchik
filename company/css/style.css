@@ -90,6 +90,17 @@ a {
 .header__search {
   border: none;
   margin-right: 35px;
+  display: block;
+  width: 24px;
+  height: 24px;
+  background-color: inherit;
+}
+
+.header__search svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .header__menu {
 }
@@ -115,7 +126,7 @@ a {
 
 .hero {
   padding-top: 269px;
-  background-image: url(/img/coverbackground.jpg);
+  background-image: url(../img/coverbackground.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -140,8 +151,7 @@ a {
 
 .hero__btn {
   margin-top: 50px;
-  width: 180px;
-  height: 60px;
+  padding: 20px 64px;
   font-style: normal;
   font-weight: 600;
   font-size: 17px;
