@@ -65,12 +65,19 @@ a {
   font-weight: 600;
   font-size: 17px;
   line-height: 21px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
 }
 
 .btn--dark {
   background-color: var(--color-dark);
   color: var(--color-white);
 }
+
+.btn--dark:hover {
+  background-color: var(--color-grey);
+  color: var(--color-white);
+}
+
 
 .grid {
   display: grid;
@@ -84,21 +91,6 @@ a {
   margin: 0 auto;
 }
 
-h3 {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 140%;
-  color: var(--color-grey)
-}
-
-p {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 150%;
-  color: var(--color-dark);
-}
 
 .header {
   position: absolute;
@@ -153,6 +145,11 @@ p {
 .menu__link {
   font-size: 16px;
   color: var(--color-white);
+  transition: color 0.2s ease-in-out;
+}
+
+.menu__link:hover {
+  color: var(--color-grey);
 }
 
 .menu__item:not(:last-child) {
@@ -189,7 +186,13 @@ p {
 .hero__btn {
   margin-top: 50px;
   background-color: var(--color-white);
-  color:var(--color-dark)
+  color:var(--color-dark);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.hero__btn:hover {
+  background-color: var(--color-dark);
+  color:var(--color-white);
 }
 
 
@@ -285,11 +288,20 @@ p {
   display:none;
 }
 
+.portfolio {
+  padding-top: 190px;
+  padding-bottom: 190px;
+}
+
 .portfolio__item__col {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+
+.portfolio__item:not(:last-child) {
+  margin-bottom: 120px;
 }
 
 .portfolio__item--reverse .portfolio__item__col:first-child{
@@ -303,4 +315,183 @@ p {
 .portfolio__item__image {
   width: 100%;
   height: 100%;
+}
+
+.portfolio__item__title {
+  margin-bottom: 20px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 140%;
+  color: var(--color-grey)
+}
+
+.portfolio__item__descr{
+  font-style: normal;
+  margin-bottom: 60px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-dark);
+}
+
+.quote {
+  margin-bottom: 190px;
+}
+
+.quote__title {
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-grey);
+}
+
+.quote__text{
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 150%;
+  color: var(--color-dark)
+}
+
+.quote__author {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-dark)
+}
+
+.quote__author span {
+  font-style: italic;
+  color: var(--color-grey) 
+}
+
+
+.services__image {
+  width: 100%;
+  height: 900px;
+  object-fit: cover;
+  margin-bottom: 190px;
+}
+
+.services__item {
+  border-top: 1px solid rgba(29, 29, 31,0.4);
+  padding: 40px 0;
+}
+
+.services__list {
+  margin-bottom: 190px;
+}
+
+.services__item__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+  color: var(--color-dark);
+}
+
+.services__item__descr {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: var(--color-grey);
+}
+
+.footer {
+  padding-top: 90px;
+  padding-bottom: 150px;
+  background-color: var(--color-dark);
+}
+
+.footer__address {
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: left;
+  color: var(--color-grey);
+}
+
+.footer__logo {
+  display: inline-block;
+  margin-bottom: 48px;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__item:not(:last-child){
+  margin-right: 20px;
+}
+
+.social__link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
+
+.social__link svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 130%;
+  color: var(--color-white);
+}
+
+.footer__form {
+  position: relative;
+  width: 100%;
+}
+
+.footer__input {
+  border: none;
+  border-bottom: 1px solid var(--color-grey);
+  padding: 24px 0;
+  width: 100%;
+  padding-right: 30px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+.footer__input::placeholder {
+  color: var(--color-grey)
+}
+
+.footer__btn {
+  background-color: inherit;
+  position: absolute;
+  right: 0;
+  bottom: 24px;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__btn svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
